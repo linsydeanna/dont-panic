@@ -1,0 +1,35 @@
+.Exercise {
+  width: 75%;
+  height: 500px;
+  background-color: #272635;
+  color: #E8E9F3;
+  font-size: 50px;
+  margin: 50px auto;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.Symptoms {
+  font-size: 20px;
+}
+
+.ReportItems {
+  color: #E8E9F3;
+  font-size: 18px;
+  display: flex;
+}
+
+.ReportItems p {
+  width: 25%;
+}
+
+input {
+  height: 30px;
+  border-radius: 5px;
+}
+
+button {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+}
