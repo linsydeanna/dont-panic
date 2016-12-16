@@ -13,9 +13,13 @@ class Severity extends Component {
 
     return (
       <div className="Exercise">
-        Rate the severity of this panic attack.
+        <h1>Rate the severity of this panic attack</h1>
         <AddSeverityForm addSeverity={addSeverity} />
-        <Link to="/end">Finish</Link>
+        <div className="SegmentLink">
+        <Link to="/end">
+          <p>Finish</p>
+        </Link>
+      </div>
       </div>
     );
   }

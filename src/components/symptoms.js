@@ -11,12 +11,16 @@ class Symptoms extends Component {
     const addSymptoms = bindActionCreators(actionCreators.addSymptoms, dispatch);
 
     return (
-      <div className="Exercise">
-      <div>Select your symptoms.</div>
-      <div className="Symptoms">
+      <div>
+      <h1>Select your symptoms</h1>
+      <div>
         <SymptomsList addSymptoms={addSymptoms} />
       </div>
-      <Link to="/breathing">Continue</Link>
+      <div className="SegmentLink">
+      <Link className="SegmentLink" to="/breathing">
+        <p>Continue</p>
+      </Link>
+      </div>
       </div>
     );
   }

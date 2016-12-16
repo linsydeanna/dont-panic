@@ -15,13 +15,13 @@ class SymptomsList extends Component {
 
   render() {
 
-      const symptoms = ['Nausea', 'Sweating', 'Dizziness', 'Shortness of Breath', 'Faintness', 'Light-headedness', 'Chest pain', 'Tingling sensations', 'Hot flashes', 'Cold flashes', 'Burning sensations', 'Hyperventilation', 'Heart palpitations']
+      const symptoms = ['Nausea', 'Sweating', 'Dizziness', 'Shortness of Breath', 'Faintness', 'Light-headedness', 'Chest pain', 'Tingling sensations', 'Hot flashes', 'Cold flashes', 'Hyperventilation', 'Heart palpitations']
 
     return (
-      <div className="Exercise">
+      <div className="Symptoms">
 
       {symptoms.map((symptom) =>
-        <div key={symptom}><input type="checkbox" id={symptom} onChange={() => this.handleChange(symptom)}/> <label htmlFor={symptom}>{symptom}</label></div>
+        <div  className="Symptom" key={symptom}><input type="checkbox" id={symptom} onChange={() => this.handleChange(symptom)}/> <label htmlFor={symptom}>{symptom}</label></div>
       )}
 
       </div>

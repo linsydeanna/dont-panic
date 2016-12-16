@@ -6,11 +6,16 @@ class Start extends Component {
 
   render() {
     return (
-      <div>
-        <div className="Exercise">
-          <Link to="/symptoms">Start</Link>
+        <div className="Segment">
+          <h1>Start the exercise</h1>
+          <div className="SegmentLink">
+          <Link to="/symptoms">
+
+              <p>Start</p>
+
+          </Link>
+          </div>
         </div>
-      </div>
     );
   }
 }
