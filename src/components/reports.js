@@ -6,32 +6,39 @@ class Reports extends Component {
   constructor() {
     super();
     this.state = {
-      incidents: []
+      incidents: [],
+      loading: true
     }
   }
 
-  componentDidMount() {
+  componentWillMount() {
     axios.get('https://pure-mesa-82885.herokuapp.com/users/ljoyner/incidents')
-    .then(function (response) {
+    .then((response) => {
       this.setState({
-        incidents: response.data
+        incidents: response.data,
+        loading: false
       })
-    }.bind(this))
-    .catch(function (error) {
+    })
+    .catch((error) => {
       console.log(error);
     });
   }
 
   render() {
-    const incidents = this.state.incidents;
-    console.log("incidents in render is ", incidents)
+    const { incidents, loading } = this.state;
+
+    if (loading) {
+      return <div>Loading Reports</div>;
+    }
+
     return (
       <div>
-        <div className="ReportItems">
+        <div className="ReportHeaders">
           <p>Date</p>
+          <p>Time</p>
           <p>Duration</p>
           <p>Symptoms</p>
-          <p>Severity Rating</p>
+          <p>Severity</p>
         </div>
       {incidents.map((incident, index) =>
         <Record key={index} incident={incident}/>

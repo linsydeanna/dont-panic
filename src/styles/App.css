@@ -12,6 +12,40 @@ h1 {
   color: #272635;
 }
 
+.LoginBox {
+  background-color: #B1E5F2;
+  width: 460px;
+  height: 480px;
+  margin: 100px auto;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.LoginForm {
+  width: 300px;
+  height: 420px;
+  margin: 0px auto;
+  padding-top: 50px;
+}
+
+.LoginInput {
+  border: solid 1px #B1E5F2;
+  box-shadow: 0 0 5px 1px #B1E5F2;
+  height: 30px;
+  width: 100%;
+  border-radius: 2px;
+}
+
+.LoginInput:focus {
+  border: solid 1px #272635;
+  box-shadow: 0 0 5px 1px #272635;
+}
+
+.LoginText p {
+  width: 50px;
+  margin: 15px 0px 0px;
+}
+
 .SegmentLink {
   background-color: #272635;
   width: 150px;
@@ -81,19 +115,37 @@ h1 {
   align-items: center;
 }
 
-.ReportItems {
+.ReportItems, .ReportHeaders {
+  margin-left: 10%;
   font-size: 18px;
   display: flex;
   text-align: center;
 }
 
-.ReportItems p {
-  width: 25%;
+.ReportHeaders p {
+  font-size: 24px;
+  margin-top: 30px;
 }
 
-input {
-  height: 30px;
-  border-radius: 5px;
+.ReportItems p {
+  width: 20%;
+  height: 70px;
+  margin-top: 0px;
+}
+
+.ReportHeaders p {
+  width: 20%;
+  height: 60px;
+  margin-top: 50px;
+}
+
+
+.ReportHeaders p:nth-child(2), .ReportItems p:nth-child(2), .ReportHeaders p:nth-child(3), .ReportItems p:nth-child(3), .ReportHeaders p:nth-child(5), .ReportItems p:nth-child(5) {
+  width: 15%;
+}
+
+.ReportItems p:nth-child(4), .ReportHeaders p:nth-child(4) {
+  padding: 0px 10px;
 }
 
 button {
