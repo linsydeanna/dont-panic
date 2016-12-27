@@ -1,5 +1,3 @@
-const incidents = {
-  test: 'test'
-}
+const incidents = {}
 
 export default incidents;

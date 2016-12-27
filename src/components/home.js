@@ -26,7 +26,8 @@ class Home extends Component {
 
 const mapStateToProps = state => (
   {
-    incidents: state.incidents
+    incidents: state.incidents,
+    timer: state.timer
   }
 );
 

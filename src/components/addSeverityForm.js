@@ -8,17 +8,6 @@ class AddSeverityForm extends Component {
     this.props.addSeverity(rating);
   }
 
-  // getData(e) {
-  //   e.preventDefault();
-  //   axios.get('https://pure-mesa-82885.herokuapp.com/users/ljoyner/incidents')
-  // .then(function (response) {
-  //   console.log(response);
-  // })
-  // .catch(function (error) {
-  //   console.log(error);
-  // });
-  // }
-
   render() {
     const ratingNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     return (

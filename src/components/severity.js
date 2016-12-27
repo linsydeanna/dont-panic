@@ -7,11 +7,14 @@ import axios from 'axios';
 
 class Severity extends Component {
 
+  stopTimer() {
+    const endTime = Date.now()
+    const startTime = this.props.timer.start
+    const totalTime = endTime - startTime
+    const minutes = Math.floor(totalTime/60000)
+  }
+
   postIncident() {
-    console.log("postIncident");
-    console.log("severity is ", this.props.incidents.severity);
-    console.log("duration is ", this.props.incidents.duration);
-    console.log("symptoms is ", this.props.incidents.symptoms);
     axios.post('https://pure-mesa-82885.herokuapp.com/users/ljoyner/incidents', {
       'severity': this.props.incidents.severity,
       'duration': this.props.incidents.duration,
@@ -36,14 +39,14 @@ class Severity extends Component {
 
   render() {
 
-    const { dispatch, incidents } = this.props;
-    console.log("this.props.incidents is ", incidents);
+    const { dispatch } = this.props;
     const addSeverity = bindActionCreators(actionCreators.addSeverity, dispatch);
 
     return (
       <div className="Exercise">
         <h1>Rate the severity of this panic attack</h1>
         <AddSeverityForm addSeverity={addSeverity} />
+        <button onClick={() => this.stopTimer()}>Stop Timer</button>
         <div className="SegmentLink">
         <Link to="/end">
           <p>Finish</p>

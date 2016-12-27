@@ -4,10 +4,11 @@ import { createStore } from 'redux';
 import rootReducer from './reducers/index';
 
 import incidents from './incidents';
+import timer from './timer'
 
 
 const defaultState = {
-  incidents
+  incidents, timer
 };
 
 const store = createStore(rootReducer, defaultState);
