@@ -9,7 +9,7 @@ class Start extends Component {
   startTimer() {
     const startTime = Date.now()
     const { dispatch } = this.props;
-    const startTimer = bindActionCreators(actionCreators.addDuration, dispatch);
+    const startTimer = bindActionCreators(actionCreators.addStart, dispatch);
     startTimer(startTime);
   }
 

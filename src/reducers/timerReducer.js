@@ -5,13 +5,11 @@ function timerReducer(state = timer, action) {
     case 'ADD_START':
       return {
         ...state,
-        start: action.duration
+        start: action.durationStart
       }
       default:
         return state;
     }
-  console.log("state is ", state)
-  console.log("action is ", action)
   return state;
 }
 

@@ -12,6 +12,11 @@ function incidentReducer(state = incidents, action) {
         ...state,
         severity: action.rating
       }
+    case 'ADD_DURATION':
+      return {
+        ...state,
+        duration: action.duration
+      }
     default:
       return state;
   }

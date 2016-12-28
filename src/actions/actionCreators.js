@@ -14,7 +14,14 @@ export const addSeverity = (rating) => {
 
 export const addDuration = (duration) => {
   return {
-    type: 'ADD_START',
+    type: 'ADD_DURATION',
     duration
+  }
+}
+
+export const addStart = (durationStart) => {
+  return {
+    type: 'ADD_START',
+    durationStart
   }
 }

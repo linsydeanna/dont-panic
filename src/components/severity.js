@@ -11,10 +11,14 @@ class Severity extends Component {
     const endTime = Date.now()
     const startTime = this.props.timer.start
     const totalTime = endTime - startTime
-    const minutes = Math.floor(totalTime/60000)
+    const minutes = Math.ceil(totalTime/60000)
+    const { dispatch } = this.props;
+    const addDuration = bindActionCreators(actionCreators.addDuration, dispatch);
+    addDuration(minutes)
   }
 
   postIncident() {
+    this.stopTimer();
     axios.post('https://pure-mesa-82885.herokuapp.com/users/ljoyner/incidents', {
       'severity': this.props.incidents.severity,
       'duration': this.props.incidents.duration,
@@ -36,7 +40,7 @@ class Severity extends Component {
       console.log(error);
     });
   }
-
+  
   render() {
 
     const { dispatch } = this.props;
@@ -46,13 +50,11 @@ class Severity extends Component {
       <div className="Exercise">
         <h1>Rate the severity of this panic attack</h1>
         <AddSeverityForm addSeverity={addSeverity} />
-        <button onClick={() => this.stopTimer()}>Stop Timer</button>
         <div className="SegmentLink">
-        <Link to="/end">
+        <Link onClick={() => this.postIncident()} to="/end">
           <p>Finish</p>
         </Link>
       </div>
-      <button onClick={() => this.postIncident()}>Post Data</button>
       </div>
     );
   }
