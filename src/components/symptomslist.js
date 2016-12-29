@@ -7,7 +7,10 @@ class SymptomsList extends Component {
   constructor() {
     super();
     this.state = {
-      symptomsArray: []
+      symptomsArray: [],
+      symptomColor: {
+        color: "#272635"
+      }
     };
   }
 
@@ -33,7 +36,6 @@ class SymptomsList extends Component {
   }
 
   render() {
-
     const symptoms = ['Nausea', 'Sweating', 'Dizziness', 'Shortness of Breath', 'Faintness', 'Light-headedness', 'Chest pain', 'Tingling sensations', 'Hot flashes', 'Cold flashes', 'Hyperventilation', 'Heart palpitations']
 
     return (
@@ -41,7 +43,10 @@ class SymptomsList extends Component {
       <div className="Symptoms">
         {symptoms.map((symptom) =>
           <div className="Symptom" key={symptom} onClick={() => this.handleClick(symptom)}>
-              <span className="fa fa-check" name="check" style={{ color: "white" }} ></span>
+            {this.state.symptomsArray.includes(symptom) ?
+              <span className="fa fa-check" name="check" style={{ color: "white" }} ></span> :
+              <span className="fa fa-check" name="check" style={{ color: "#272635" }} ></span>
+            }
             <p>{symptom}</p>
           </div>
         )}
