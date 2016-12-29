@@ -3,6 +3,7 @@ import {Link} from 'react-router';
 import Logo from '../logo.png';
 import { connect } from 'react-redux';
 import '../styles/App.css';
+import Alert from 'react-s-alert';
 
 class Home extends Component {
 
@@ -19,6 +20,7 @@ class Home extends Component {
           </Link>
         </div>
         {React.cloneElement(this.props.children, this.props)}
+        <Alert stack={{limit: 3}} />
       </div>
     );
   }

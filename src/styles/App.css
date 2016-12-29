@@ -88,11 +88,35 @@ h1 {
   margin: 50px auto;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .Symptom {
-  width: 25%;
-  font-size: 30px;
+  width: 29%;
+  height: 50px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  display: flex;
+  background-color: #CECECE;
+  border: 1px solid #272635;
+}
+
+.Symptom:hover {
+  cursor: pointer;
+}
+
+.Symptom span, p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.Symptom span {
+  padding-left: 10px;
+  border-right: 1px solid #272635;
+  padding-right: 10px;
+  background-color: #272635;
 }
 
 .Ratings {
