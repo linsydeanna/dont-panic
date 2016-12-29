@@ -7,6 +7,11 @@ function incidentReducer(state = incidents, action) {
         ...state,
         symptoms: action.symptoms
       }
+    case 'DELETE_SYMPTOMS':
+    return {
+      ...state,
+      symptoms: state.symptoms.filter(symptom => symptom !== action.symptom)
+    }
     case 'ADD_SEVERITY':
       return {
         ...state,

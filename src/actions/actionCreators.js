@@ -5,6 +5,13 @@ export const addSymptoms = (symptoms) => {
   }
 }
 
+export const deleteSymptoms = (symptom) => {
+  return {
+    type: 'DELETE_SYMPTOMS',
+    symptom
+  }
+}
+
 export const addSeverity = (rating) => {
   return {
     type: 'ADD_SEVERITY',

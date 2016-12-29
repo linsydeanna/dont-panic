@@ -9,12 +9,13 @@ class Symptoms extends Component {
 
     const { dispatch } = this.props;
     const addSymptoms = bindActionCreators(actionCreators.addSymptoms, dispatch);
+    const deleteSymptoms = bindActionCreators(actionCreators.deleteSymptoms, dispatch);
 
     return (
       <div>
       <h1>Select your symptoms</h1>
       <div>
-        <SymptomsList addSymptoms={addSymptoms} />
+        <SymptomsList addSymptoms={addSymptoms} deleteSymptoms={deleteSymptoms} />
       </div>
       <div className="SegmentLink">
       <Link className="SegmentLink" to="/breathing">

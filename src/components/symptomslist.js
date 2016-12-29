@@ -12,16 +12,24 @@ class SymptomsList extends Component {
   }
 
   showAlert = () => {
-      Alert.error('Whoops! You forgot to select at least one symptom.', {
-        position: 'bottom-left',
-        effect: 'slide',
-        timeout: 3000
-      });
+    Alert.error('Whoops! You forgot to select at least one symptom.', {
+      position: 'bottom-left',
+      effect: 'slide',
+      timeout: 3000
+    });
   }
 
   handleClick(symptomClicked) {
-    this.state.symptomsArray.push(symptomClicked);
-    this.props.addSymptoms(this.state.symptomsArray);
+    const { symptomsArray } = this.state;
+    if (symptomsArray.includes(symptomClicked)) {
+      this.setState({
+        symptomsArray: symptomsArray.filter(symptom => symptom !== symptomClicked)
+      })
+      this.props.deleteSymptoms(symptomClicked)
+    } else {
+      symptomsArray.push(symptomClicked)
+      this.props.addSymptoms(symptomsArray);
+    }
   }
 
   render() {
