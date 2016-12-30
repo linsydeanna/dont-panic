@@ -25,14 +25,14 @@ class Symptoms extends Component {
     const deleteSymptoms = bindActionCreators(actionCreators.deleteSymptoms, dispatch);
     return (
       <div>
-      <h1>Select your symptoms</h1>
-      <div>
-        <SymptomsList addSymptoms={addSymptoms} deleteSymptoms={deleteSymptoms} />
-      </div>
-      <div className="SegmentLink" onClick={() => this.showAlert()}>
-        <p>Continue</p>
-      </div>
-      <Alert stack={{limit: 1}} />
+        <h1>Select your symptoms</h1>
+        <div>
+          <SymptomsList addSymptoms={addSymptoms} deleteSymptoms={deleteSymptoms} />
+        </div>
+        <div className="SegmentLink" onClick={() => this.showAlert()}>
+          <p>Continue</p>
+        </div>
+        <Alert stack={{limit: 1}} />
       </div>
     );
   }

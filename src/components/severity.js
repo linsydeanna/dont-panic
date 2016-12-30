@@ -32,7 +32,7 @@ class Severity extends Component {
         <h1>Rate the severity of this panic attack</h1>
         <AddSeverityForm addSeverity={addSeverity} />
         <div className="SegmentLink" onClick={() => this.handleClick()}>
-          <p>Finish</p>
+          <p>Continue</p>
       </div>
       <Alert stack={{limit: 1}} />
       </div>

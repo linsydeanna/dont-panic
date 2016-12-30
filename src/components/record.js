@@ -21,6 +21,7 @@ class Record extends Component {
       <p>{incident.duration} {min}</p>
       <p>{symptomList}</p>
       <p>{incident.severity}</p>
+      <p onClick={() => this.props.deleteRecord(incident)}>Delete this record</p>
       </div>
     )
   }

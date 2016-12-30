@@ -1,9 +1,19 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import {browserHistory} from 'react-router';
 
 class End extends Component {
+  constructor() {
+    super();
+    this.state = {
+      saving: false
+    }
+  }
 
   postIncident() {
+    this.setState({
+      saving: true
+    })
     console.log("this.props.incidents.duration is ", this.props.incidents.duration);
     axios.post('https://pure-mesa-82885.herokuapp.com/users/ljoyner/incidents', {
       'severity': this.props.incidents.severity,
@@ -17,16 +27,24 @@ class End extends Component {
   .catch(function (error) {
     console.log(error);
   });
+  this.setState({
+    saving: false
+  })
+  browserHistory.push("/start")
   }
 
-
   render() {
+    let saving;
+    if (this.state.saving) {
+      saving = <div>Saving</div>;
+    }
     return (
       <div>
-      <p>You've finished the exercise. Would you like to save a report of this panic attack?</p>
-      <div onClick={() => this.postIncident()}>
-        <p>Save Report</p>
+      <h1 className="Text">You've finished the exercise. Would you like to save a report of this panic attack?</h1>
+      <div className="SegmentLink" onClick={() => this.postIncident()}>
+        <p>Save</p>
       </div>
+      {saving}
       </div>
     );
   }

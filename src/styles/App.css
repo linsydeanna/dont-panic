@@ -5,6 +5,8 @@ body {
 h1 {
   text-align: center;
   font-size: 30px;
+  margin-bottom: 40px;
+  margin-top: 40px;
 }
 
 .App {
@@ -56,16 +58,18 @@ h1 {
   text-align: center;
   margin: 0 auto;
   line-height: 50px;
+  cursor: pointer;
 }
 
-.SegmentLink a {
+.SegmentLink p, .SegmentLink a {
   color: #B1E5F2;
   text-decoration: none;
+  margin: 0 auto;
 }
 
 .Logo {
-  width: 6%;
-  height: 6%;
+  width: 80px;
+  height: 70px;
   margin: 0px 10px 0px 100px;
 }
 
@@ -83,7 +87,7 @@ h1 {
 }
 
 .Symptoms {
-  width: 85%;
+  width: 80%;
   display: flex;
   margin: 50px auto;
   flex-direction: row;
@@ -92,12 +96,12 @@ h1 {
 }
 
 .Symptom {
-  width: 29%;
+  width: 31%;
   height: 55px;
   margin-bottom: 10px;
   font-size: 20px;
   display: flex;
-  background-color: #CECECE;
+  background-color: #A6A6A8;
   border: 1px solid #272635;
 }
 
@@ -105,7 +109,14 @@ h1 {
   cursor: pointer;
 }
 
-.Symptom span, p {
+.Symptom span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.Symptom p {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -122,21 +133,20 @@ h1 {
 .Ratings {
   display: flex;
   width: 75%;
-  margin: 0 auto;
+  margin: 50px auto;
   justify-content: space-between;
 }
 
 .Circle {
   width: 70px;
   height: 70px;
-  background: #272635;
-  color: #B1E5F2;
-  font-size: 40px;
+  cursor: pointer;
   border-radius: 35px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 40px;
 }
 
 .ReportItems, .ReportHeaders {
@@ -162,7 +172,6 @@ h1 {
   height: 60px;
   margin-top: 50px;
 }
-
 
 .ReportHeaders p:nth-child(2), .ReportItems p:nth-child(2), .ReportHeaders p:nth-child(3), .ReportItems p:nth-child(3), .ReportHeaders p:nth-child(5), .ReportItems p:nth-child(5) {
   width: 15%;

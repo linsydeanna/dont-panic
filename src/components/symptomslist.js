@@ -27,7 +27,7 @@ class SymptomsList extends Component {
         {symptoms.map((symptom) =>
           <div className="Symptom" key={symptom} onClick={() => this.handleClick(symptom)}>
             {this.state.symptomsArray.includes(symptom) ?
-              <span className="fa fa-check" name="check" style={{ color: "white" }} ></span> :
+              <span className="fa fa-check" name="check" style={{ color: "#B1E5F2" }} ></span> :
               <span className="fa fa-check" name="check" style={{ color: "#272635" }} ></span>
             }
             <p>{symptom}</p>

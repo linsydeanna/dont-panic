@@ -23,6 +23,10 @@ class Reports extends Component {
       console.log(error);
     });
   }
+
+  deleteRecord(recordDeleted) {
+    console.log("delete record works for ", recordDeleted)
+  }
   render() {
     if (this.state.loading) {
       return <div>Loading Reports</div>;
@@ -37,7 +41,7 @@ class Reports extends Component {
           <p>Severity</p>
         </div>
       {this.state.incidents.map((incident, index) =>
-        <Record key={index} incident={incident}/>
+        <Record key={index} incident={incident} deleteRecord={this.deleteRecord}/>
       )}
       </div>
     );
