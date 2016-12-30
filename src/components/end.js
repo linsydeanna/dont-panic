@@ -14,7 +14,6 @@ class End extends Component {
     this.setState({
       saving: true
     })
-    console.log("this.props.incidents.duration is ", this.props.incidents.duration);
     axios.post('https://pure-mesa-82885.herokuapp.com/users/ljoyner/incidents', {
       'severity': this.props.incidents.severity,
       'duration': this.props.incidents.duration,

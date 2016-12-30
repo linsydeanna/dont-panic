@@ -14,6 +14,7 @@ class Reports extends Component {
   componentWillMount() {
     axios.get('https://pure-mesa-82885.herokuapp.com/users/ljoyner/incidents')
     .then((response) => {
+      console.log(response)
       this.setState({
         incidents: response.data,
         loading: false
@@ -25,8 +26,20 @@ class Reports extends Component {
   }
 
   deleteRecord(recordDeleted) {
-    console.log("delete record works for ", recordDeleted)
+    console.log("record id is ", recordDeleted);
+
+      // `/api/v1/notifications/${itemId}/delete`
+
+    axios.delete(`https://pure-mesa-82885.herokuapp.com/users/ljoyner/incidents/${recordDeleted._id}`)
+   .then(function (response) {
+      console.log(response)
+   })
+   .catch(function (response) {
+      console.error(response);
+   });
+
   }
+
   render() {
     if (this.state.loading) {
       return <div>Loading Reports</div>;
