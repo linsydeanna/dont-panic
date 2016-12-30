@@ -3,10 +3,8 @@ import {Link} from 'react-router';
 import Logo from '../logo.png';
 import { connect } from 'react-redux';
 import '../styles/App.css';
-import Alert from 'react-s-alert';
 
 class Home extends Component {
-
   render() {
     return (
       <div className="Home">
@@ -20,7 +18,6 @@ class Home extends Component {
           </Link>
         </div>
         {React.cloneElement(this.props.children, this.props)}
-        <Alert stack={{limit: 3}} />
       </div>
     );
   }
@@ -33,5 +30,4 @@ const mapStateToProps = state => (
   }
 );
 
-//subscribes Home to any changes in state
 export default connect(mapStateToProps)(Home);

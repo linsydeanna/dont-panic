@@ -23,14 +23,10 @@ class Reports extends Component {
       console.log(error);
     });
   }
-
   render() {
-    const { incidents, loading } = this.state;
-
-    if (loading) {
+    if (this.state.loading) {
       return <div>Loading Reports</div>;
     }
-
     return (
       <div>
         <div className="ReportHeaders">
@@ -40,7 +36,7 @@ class Reports extends Component {
           <p>Symptoms</p>
           <p>Severity</p>
         </div>
-      {incidents.map((incident, index) =>
+      {this.state.incidents.map((incident, index) =>
         <Record key={index} incident={incident}/>
       )}
       </div>

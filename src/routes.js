@@ -9,11 +9,9 @@ import Breathing from './components/breathing';
 import Severity from './components/severity';
 import End from './components/end';
 import Reports from './components/reports';
-
 import { Provider } from 'react-redux';
 import store from './store';
 // import store, { history } from './store';
-
 
 const routes = (
   <Provider store={store}>
