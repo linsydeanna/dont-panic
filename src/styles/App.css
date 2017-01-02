@@ -14,40 +14,6 @@ h1 {
   color: #272635;
 }
 
-.LoginBox {
-  background-color: #B1E5F2;
-  width: 460px;
-  height: 480px;
-  margin: 100px auto;
-  text-align: center;
-  border-radius: 3px;
-}
-
-.LoginForm {
-  width: 300px;
-  height: 420px;
-  margin: 0px auto;
-  padding-top: 50px;
-}
-
-.LoginInput {
-  border: solid 1px #B1E5F2;
-  box-shadow: 0 0 5px 1px #B1E5F2;
-  height: 30px;
-  width: 100%;
-  border-radius: 2px;
-}
-
-.LoginInput:focus {
-  border: solid 1px #272635;
-  box-shadow: 0 0 5px 1px #272635;
-}
-
-.LoginText p {
-  width: 50px;
-  margin: 15px 0px 0px;
-}
-
 .SegmentLink {
   background-color: #272635;
   width: 150px;
@@ -109,12 +75,13 @@ h1 {
   margin-bottom: 10px;
   font-size: 20px;
   display: flex;
-  background-color: #A6A6A8;
+  background-color: #CECECE;
   border: 1px solid #272635;
 }
 
 .Symptom:hover {
   cursor: pointer;
+  background-color: #A6A6A8;
 }
 
 .Symptom span {
