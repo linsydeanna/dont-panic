@@ -16,11 +16,11 @@ h1 {
 
 .SegmentLink {
   background-color: #272635;
-  width: 150px;
+  width: 154px;
   height: 50px;
   border-radius: 5px;
   font-family: 'Nunito', sans-serif;
-  font-size: 30px;
+  font-size: 24px;
   text-align: center;
   margin: 0 auto;
   line-height: 50px;
@@ -37,7 +37,7 @@ h1 {
   color: white;
 }
 
-.Logo {
+.LogoNav {
   width: 82px;
   height: 78px;
   margin: 0px 10px 0px 100px;
