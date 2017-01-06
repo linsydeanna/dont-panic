@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import moment from 'moment';
 
 class Record extends Component {
+
+  // <span className="fa fa-times TrashCan" name="fa-times"
+  //   onClick={() => this.props.deleteRecord(incident)}>
+  // </span>
+
+
   render() {
     const { incident } = this.props
     let symptomList
@@ -14,16 +20,13 @@ class Record extends Component {
     if (incident.duration > 1) {
       min = ' minutes'
     }
-
     return(
       <div className="ReportItems">
-      <p>{moment(incident.createDate).format('MMMM Do, YYYY')}</p>
-      <p>{moment(incident.createDate).format('h:mma')}</p>
-      <p>{incident.duration} {min}</p>
-      <p>{symptomList}</p>
-      <p>{incident.severity}</p>
-      <p className="TrashCan" onClick={() => this.props.deleteRecord(incident)}>Delete</p>
-
+        <p>{moment(incident.createDate).format('MMMM Do, YYYY')}</p>
+        <p>{moment(incident.createDate).format('h:mma')}</p>
+        <p>{incident.duration} {min}</p>
+        <p>{symptomList}</p>
+        <p>{incident.severity}</p>
       </div>
     )
   }

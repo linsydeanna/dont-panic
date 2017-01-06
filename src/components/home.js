@@ -9,9 +9,8 @@ class Home extends Component {
     return (
       <div className="Home">
         <div className="Nav">
-          <img className="LogoNav" src={Logo} alt="logo"/>
           <Link className="NavItem" to="/start">
-            <p>Home</p>
+            <img className="LogoNav" src={Logo} alt="logo"/>
           </Link>
           <Link className="NavItem" to="/reports">
             <p>Reports</p>

@@ -172,13 +172,15 @@ h1 {
   padding: 0px 10px;
 }
 
-.TrashCan {
+/*.TrashCan {
   visibility: hidden;
+  cursor: pointer;
+  color: #272635;
 }
 
 .ReportItems:hover .TrashCan {
   visibility: visible;
-}
+}*/
 
 button {
   width: 100px;
