@@ -172,6 +172,14 @@ h1 {
   padding: 0px 10px;
 }
 
+.TrashCan {
+  visibility: hidden;
+}
+
+.ReportItems:hover .TrashCan {
+  visibility: visible;
+}
+
 button {
   width: 100px;
   height: 30px;

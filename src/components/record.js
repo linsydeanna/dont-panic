@@ -15,8 +15,6 @@ class Record extends Component {
       min = ' minutes'
     }
 
-    // <p onClick={() => this.props.deleteRecord(incident)}>Delete this record</p>
-
     return(
       <div className="ReportItems">
       <p>{moment(incident.createDate).format('MMMM Do, YYYY')}</p>
@@ -24,6 +22,7 @@ class Record extends Component {
       <p>{incident.duration} {min}</p>
       <p>{symptomList}</p>
       <p>{incident.severity}</p>
+      <p className="TrashCan" onClick={() => this.props.deleteRecord(incident)}>Delete</p>
 
       </div>
     )
