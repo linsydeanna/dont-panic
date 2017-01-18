@@ -51,9 +51,10 @@ h1 {
 .NavItem {
   color: #B1E5F2;
   font-size: 18px;
-  line-height: 40px;
   margin-right: 15px;
   text-decoration: none;
+  height: 100%;
+  align-self: center;
 }
 
 .NavItem:hover {
