@@ -3,6 +3,7 @@ import {Link} from 'react-router';
 import Logo from '../logo.png';
 import { connect } from 'react-redux';
 import '../styles/App.css';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class Home extends Component {
   render() {
@@ -16,7 +17,16 @@ class Home extends Component {
             <p>Reports</p>
           </Link>
         </div>
-        {React.cloneElement(this.props.children, this.props)}
+        <ReactCSSTransitionGroup
+          className="Page"
+          component="div"
+          transitionName="move"
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={500}
+          >
+          {React.cloneElement(this.props.children, {...this.props,
+          key: this.props.location.pathname})}
+        </ReactCSSTransitionGroup>
       </div>
     );
   }

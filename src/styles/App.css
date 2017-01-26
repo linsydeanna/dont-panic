@@ -14,6 +14,44 @@ h1 {
   color: #272635;
 }
 
+.Page {
+  position: relative;
+}
+
+.Page > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.move-enter {
+  animation: page-enter 500ms;
+}
+
+@keyframes page-enter {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.move-leave {
+  animation: page-leave 500ms;
+}
+
+@keyframes page-leave {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
 .SegmentLink {
   background-color: #272635;
   width: 154px;
@@ -92,7 +130,7 @@ h1 {
   margin-right: 10px;
 }
 
-.Symptom p {
+.Symptom > p {
   display: flex;
   flex-direction: column;
   justify-content: center;
