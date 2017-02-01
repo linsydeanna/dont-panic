@@ -10,43 +10,22 @@ class Start extends Component {
   constructor() {
     super();
     this.state = {
-      incidents: [],
-      loading: true
+      incidents: []
     }
   }
 
-  startTimer() {
+  handleClick() {
     const startTime = Date.now()
-    const { dispatch } = this.props;
-    const startTimer = bindActionCreators(actionCreators.addStart, dispatch);
-    startTimer(startTime);
-  }
-
-  componentWillMount() {
-    axios.get('https://pure-mesa-82885.herokuapp.com/users/ljoyner/incidents')
-    .then((response) => {
-      console.log(response)
-      this.setState({
-        incidents: response.data,
-        loading: false
-      })
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+    const startTimer = actionCreators.addStart;
+    this.props.dispatch(startTimer(startTime));
   }
 
   render() {
-    if (!this.state.loading) {
-      console.log(this.state.incidents[this.state.incidents.length - 1].createDate)
-    }
     return (
         <div className="Segment">
-          <h1>Your last panic attack was
-            {this.state.loading ? '' : ' ' + moment(this.state.incidents[this.state.incidents.length - 1].createDate).format('MMMM Do, YYYY')}</h1>
           <h1>Having a panic attack? Start the exercise.</h1>
           <div className="SegmentLink">
-          <Link onClick={() => this.startTimer()} to="/symptoms">
+          <Link onClick={() => this.handleClick()} to="/symptoms">
               <p>Start</p>
           </Link>
           </div>
