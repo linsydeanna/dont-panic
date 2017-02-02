@@ -3,8 +3,6 @@ import {Link} from 'react-router'
 import * as actionCreators from '../actions/actionCreators'
 import { bindActionCreators } from 'redux';
 import '../styles/App.css';
-import axios from 'axios';
-import moment from 'moment';
 
 class Start extends Component {
   constructor() {

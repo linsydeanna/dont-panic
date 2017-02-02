@@ -1,0 +1,92 @@
+.Circle {
+	width: 160px;
+	height: 160px;
+	background: #272635;
+	-moz-border-radius: 80px;
+	-webkit-border-radius: 80px;
+	border-radius: 80px;
+  margin: 100px auto;
+  animation: grow-circle 12s infinite;
+  animation-play-state: grow-circle 1s paused;
+}
+
+@keyframes grow-circle {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(2);
+  }
+  50% {
+    transform: scale(2);
+  }
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.Exhale {
+  animation: exhale 12s infinite;
+  color: white;
+  position: absolute;
+  margin: 0;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  -moz-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+}
+
+@keyframes exhale {
+  0% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  55% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.Inhale {
+  animation: inhale 12s infinite;
+  color: white;
+  position: absolute;
+  margin: 0;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  -moz-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+}
+
+@keyframes inhale {
+  0% {
+    opacity: 1;
+  }
+  32% {
+    opacity: 1;
+  }
+  42% {
+    opacity: 0;
+  }
+  82% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0;
+  }
+}
